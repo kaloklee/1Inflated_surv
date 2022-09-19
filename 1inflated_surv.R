@@ -7,7 +7,7 @@ N = 10000;
 r = 2;
 alpha = 20;
 p = 0.35;
-#censoring point (uniform for all subjects)
+#censoring point > 1 (uniform for all subjects)
 C=10;
 
 #Inverse-CDF method to simulate from Lomax distribution with uniform censoring
