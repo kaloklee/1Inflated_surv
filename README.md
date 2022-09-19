@@ -1,10 +1,10 @@
 # One-inflated Survival Model
 
-This repository contains the R code and presentation for an 1-inflated parametric survival model that I created.  
-The application of this model is for pharmaceutical medication length of therapy.
+This repository contains the R code and presentation for an one-inflated parametric survival model that I created.  
+My application of this model is for pharmaceutical medication length of therapy.  The presentation contains motivation of the work.
+I would love to hear the use of this model in other applications and industries.  
 
-The presentation contains motivation of the work.
-Unforunately, the data used for the analysis in the presentation cannot be made available.
+The data used for the analysis in the presentation unforunately cannot be made available.
 
 The R code thus simulates from the model, proceeds to estimate the parameters and creates the graph.   
 
