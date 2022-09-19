@@ -1,4 +1,4 @@
-# 1Inflated_surv
+# One-inflated Survival Model
 
 This repository contains the R code and presentation for an 1-inflated parametric survival model that I created.  
 The application of this model is for pharmaceutical medication length of therapy.
