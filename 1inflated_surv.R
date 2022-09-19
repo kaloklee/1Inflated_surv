@@ -5,7 +5,7 @@ library(ggplot2)
 
 N = 10000;
 r = 2;
-alpha = 20;
+alpha = 10;
 p = 0.35;
 #censoring point > 1 (uniform for all subjects)
 C=10;
@@ -111,6 +111,7 @@ ggplot() +
   geom_line(data = km_df, aes( x=fit.km.time, y=fit.km.surv, color = "K-M")) + 
   scale_color_manual(name = "", 
                      values = c("Model"="blue", "K-M" = "red"))
+ggsave("graph.png")
 
 ####Final Remark
 #Simulation also reveals parameter recovery is less precise than one hopes. But this does not seem to affect the model fitting to the data.
