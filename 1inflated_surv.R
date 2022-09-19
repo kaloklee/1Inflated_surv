@@ -111,3 +111,7 @@ ggplot() +
   geom_line(data = km_df, aes( x=fit.km.time, y=fit.km.surv, color = "K-M")) + 
   scale_color_manual(name = "", 
                      values = c("Model"="blue", "K-M" = "red"))
+
+####Final Remark
+#Simulation also reveals parameter recovery is less precise than one hopes. But this does not seem to affect the model fitting to the data.
+
