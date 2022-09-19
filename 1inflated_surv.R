@@ -7,9 +7,10 @@ N = 10000;
 r = 2;
 alpha = 20;
 p = 0.35;
+#censoring point (uniform for all subjects)
 C=10;
 
-#inverse-CDF method to simulate from Lomax distribution with uniform censoring
+#Inverse-CDF method to simulate from Lomax distribution with uniform censoring
 rlomax_cen <- function(N, r, alpha, C) {
   
   f = runif(N);
@@ -22,7 +23,7 @@ rlomax_cen <- function(N, r, alpha, C) {
   
 }
 
-D = (rbinom(N, 1, p)==1);
+D = rbinom(N, 1, p);
 t = (D==1)+(D==0)*rlomax_cen(N,r,alpha,C);
 
 #Make a data frame for Kaplan-Meier
@@ -98,7 +99,7 @@ lomax1f_surv <- function(par,t) {
   
 }
 
-lomax1f_df<-lomax1f_surv(solution$par,c(seq(0, 20, by = .1))  )
+lomax1f_df<-lomax1f_surv(solution$par,c(seq(0, 20, by = .1)))
 
 #Kaplan-Meier curve
 fit.km = survfit( Surv(for_km$time, for_km$status) ~ 1, conf.int=F)
