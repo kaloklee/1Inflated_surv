@@ -2,7 +2,7 @@
 
 This repository contains the R code and presentation for an one-inflated parametric survival model that I created.  
 My application of this model is for pharmaceutical medication length of therapy.  The presentation contains motivation of the work.
-I would love to hear the use of this model in other applications and industries.  
+I would love to hear from you the use of this model in other applications and industries.  
 
 The data used for the analysis in the presentation unforunately cannot be made available.
 
