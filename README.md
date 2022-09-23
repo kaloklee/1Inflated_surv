@@ -8,9 +8,9 @@ I would love to hear from you the use of this model in other applications and in
 The presentation uses animated slides. Please view it in slide show mode.
 The data used for the analysis in the presentation unforunately cannot be made available.
 
-The R code thus simulates from the model, proceeds to estimate the parameters and creates the graph. Users are welcome to take the code and modify for your own use.  
-Please cite this repository when appropriate. Thank you.
+I share 2 R codes.  Both simulate the data, proceeds to estimate the model and creates the graph. One R code uses MLE; another R code uses Bayesian estimation with Stan.  Users are welcome to take the code and modify for your own use.  
 
+Please cite this repository when appropriate. Thank you.
 
 I presented this work with my coworker Srihari Jaganathan in the Annual PMSA confererence 2022.
 I will present it again in the Annual INFORMS meeting 2022.
