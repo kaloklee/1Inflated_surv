@@ -1,3 +1,4 @@
+#Load libraries.  I use 'cmdstanr' for Stan. One may use 'rstan' instead.
 library(cmdstanr)
 library(posterior)
 library(bayesplot)
@@ -27,9 +28,11 @@ rlomax_cen <- function(N, r, alpha, C) {
 D = rbinom(N, 1, p);
 t = (D==1)+(D==0)*rlomax_cen(N,r,alpha,C);
 
+#create data frame for Kaplan-Meier
 for_km <- data.frame( time = t,
                       status = (t<C) ) ;
 
+#compile Stan model.  The 'stanc_options =' can be omitted.
 file <- file.path("~/R/ExpGamma_1f.stan")
 mod <- cmdstan_model(file, stanc_options = list("O1"), quiet=TRUE)
 
@@ -59,7 +62,7 @@ fit_eg1f$summary()
 
 posterior1 <- fit_eg1f$draws(format="df")
 
-#check convergence
+#check parameters convergence and diagnostics
 mcmc_trace(posterior1, pars = c("r","alpha","p"))
 
 mcmc_intervals(posterior1, pars =c("r","alpha","p"))
@@ -111,16 +114,3 @@ ggplot() +
   scale_color_manual(name = "", 
                      values = c("posterior prediction"="blue", "K-M" = "red"))
 
-
-
-
-ggplot(model_draws_Surv %>%
-         mutate(type = 'posterior prediction') %>%
-         rename(time = timing, surv = surv_median,
-                lower = surv_p5, upper = surv_p95) %>%
-         bind_rows(km_df %>% 
-                     mutate(type = 'actual')),
-       aes(x = time, group=type)) +
-  geom_line(aes (y =surv, color = type)) +
-  geom_ribbon(aes(ymin=lower, ymax=upper), alpha=.2) +
-  xlim(c(0,20))
