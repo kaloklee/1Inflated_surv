@@ -106,7 +106,7 @@ km_df <- km_df %>%
   rename(time = fit.km.time, surv = fit.km.surv) 
 
 
-#Plot them side by side
+#Plot them side by side.  Output graph is omitted.
 ggplot() + 
   geom_line(data = model_draws_Surv, aes( x=timing, y=surv_median, color = "posterior prediction")) +
   geom_ribbon(data = model_draws_Surv, aes(x=timing, ymin=surv_p5, ymax=surv_p95), alpha=.2) +
