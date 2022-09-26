@@ -32,9 +32,9 @@ for_km <- data.frame( time = t,
 
 #The following two columns are from a Kaplan-Meier dataframe, which can come from user's dataframe
 #IMPORTANT: 
-#if your "time" is recorded in days, you should normalize it to month by dividing by 28
-#if your "time" is recorded in weeks, you should normalize it to month by dividing by 4
-#if your "time" is recorded in years, you should normalize it to month by multiplying it by 12
+#if your "time" or "t" is recorded in days, you should normalize it to month by dividing by 28
+#if your "time" or "t" is recorded in weeks, you should normalize it to month by dividing by 4
+#if your "time" or "t" is recorded in years, you should normalize it to month by multiplying it by 12
 t_uncen<-for_km$t[which(for_km$t<C)];
 t_cen<-for_km$t[which(for_km$t>=C)];
 
