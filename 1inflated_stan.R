@@ -36,6 +36,9 @@ for_km <- data.frame( time = t,
 file <- file.path("~/R/ExpGamma_1f.stan")
 mod <- cmdstan_model(file, stanc_options = list("O1"), quiet=TRUE)
 
+#if your "time" or "t" is recorded in days, you should normalize it to month by dividing by 28
+#if your "time" or "t" is recorded in weeks, you should normalize it to month by dividing by 4
+#if your "time" or "t" is recorded in years, you should normalize it to month by multiplying it by 12
 data_list <- list(
   Nuc = length(which(for_km$status==1)), 
   yuc = unlist(for_km$t[which(for_km$status==1)]),
