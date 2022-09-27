@@ -13,7 +13,7 @@ I share 2 R codes here.  Both simulate the data, proceed to estimate the model a
 
 Please cite this repository when appropriate. Thank you.
 
-I presented this work with my coworker Srihari Jaganathan in the Annual PMSA confererence 2022.
-I will present it again in the Annual INFORMS meeting 2022.
+I presented this work with my coworker Srihari Jaganathan in the annual PMSA confererence 2022.
+I will present it again in the annual INFORMS meeting 2022.
 
 Feel free to contact me with questions and comments: kaloklee@gmail.com
